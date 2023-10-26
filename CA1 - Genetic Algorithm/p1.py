@@ -140,22 +140,22 @@ class Genetic:
             population.extend(carried)
 
 
-# input_data = Input(
-#     ex_len=8,
-#     coefficients=[x for x in range(-10, 10)],
-#     goal={1: 7, 2: 527, 3: 9723, 0: 9, -1: 11, -2: -677, -3: -12153}
-# )
 input_data = Input(
-    ex_len=4,
+    ex_len=8,
+    coefficients=[x for x in range(-10, 10)],
+    goal={1: 7, 2: 527, 3: 9723, 0: 9, -1: 11, -2: -677, -3: -12153}
+)
+input_data1 = Input(
+    ex_len=8,
     coefficients=[x for x in range(-6, 10)],
     goal={0: 1, 1: 0, 2: -5, -1:-8}
 )
 
 curve_fitting = Genetic(
     input=input_data,
-    prob_xover=0.4,
-    prob_mut_chromosome=0.6,
-    prob_mut_gene=0.7,
+    prob_xover=0.55,
+    prob_mut_chromosome=0.45,
+    prob_mut_gene=0.55,
     prob_carry=0.09,
     population_size=100,
     max_generation=5000
